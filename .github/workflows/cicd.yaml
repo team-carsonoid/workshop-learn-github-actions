@@ -15,7 +15,8 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - run: echo $ORG_VAR
+      - run: |
+        echo "OV: $ORG_VAR, V: $VAR"
 
       - name: Build
         uses: ./.github/actions/build
