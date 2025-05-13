@@ -17,6 +17,9 @@ jobs:
 
       - run: |
           echo "OV: $ORG_VAR, V: $VAR"
+        env:
+          ORG_VAR: ${{ vars.ORG_VAR }}
+          VAR: ${{ vars.VAR }}
 
       - name: Build
         uses: ./.github/actions/build
